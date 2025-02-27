@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuadro de imágenes 7x6</title>
+    <title>Te amo Yare </title>
     <style>
         body {
-            display: flex;
+            /*display: flex;
+            flex-direction: column; 
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f7f7f7;
+            background: linear-gradient(to bottom, #efa3e6, #FFC300); /* Degradado de arriba hacia abajo 
             margin: 0;
+            }*/
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('imagenes/fondo6.png'); /* Imagen de fondo */
+            background-size: cover; /* Hace que la imagen cubra todo el fondo */
+            background-position: center; /* Centra la imagen */
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 60px; 
+            font-size: 40px; 
+            color: #ff0000; /* Color blanco para el texto */
+            font-family: 'Playfair Display', serif;
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-weight: bold; 
         }
         .grid {
             display: grid;
@@ -34,46 +55,41 @@
         .grid img:hover {
             transform: scale(1.1);
         }
-        .merged {
-            grid-column: span 2; /* Combina 2 columnas */
-            grid-row: span 2;    /* Combina 2 filas */
-            width: 100%;
-            height: auto; 
+        /* Estilos para el botón */
+        .btn {
+            background-color: #a72828; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 20px; /* Bordes redondeados */
+            padding: 10px 20px; /* Espaciado interno */
+            font-size: 18px; /* Tamaño de la fuente */
+            cursor: pointer; /* Cambiar cursor al pasar el ratón */
+            transition: background-color 0.3s; /* Efecto de transición */
+            margin-top: 20px; /* Espacio encima del botón */
         }
-        .merged-horizontal {
-            grid-column: span 1; /* Combina 2 columnas */
-            grid-row: span 2;    /* Se queda en una fila */
-            width: 100%;        /* Ajustar según el diseño */
-            height: auto;        /* Altura estándar */
+        .btn:hover {
+            background-color: #fbb5f8ea; /* Color de fondo al pasar el ratón */
         }
     </style>
 </head>
 <body>
+    <h1>FELICES 7 MESES</h1>
     <div class="grid">
         <script>
             let removedIndexes = [1, 4, 7, 22, 28, 29, 30, 34, 35, 36, 37, 38, 40, 41, 42];
-            let mergedIndexes = [5, 6, 9, 10, 12, 13, 16, 17, 18, 19, 25, 26];
+            let mergedIndexes = [];
             for (let i = 1; i <= 42; i++) {
                 if (removedIndexes.includes(i)) {
-                    document.write(`<div></div>`); // Espacio vacío en la cuadrícula
-                } else if (i === 9) {
-                    document.write(`<div class="merged"><img src="imagenes/merged2.jpg" alt="Imagen combinada"></div>`);
-                } else if (i === 18) {
-                    document.write(`<div class="merged"><img src="imagenes/merged3.jpg" alt="Imagen combinada"></div>`);
-                } else if (i === 5) {
-                    document.write(`<div class="merged"><img src="imagenes/merged1.jpg" alt="Imagen combinada"></div>`);
-                } else if (i === 8) {
-                    document.write(`<div class="merged-horizontal"><img src="imagenes/merged4.jpg" alt="Imagen combinada horizontal"></div>`);
-                } else if (i === 15) {
-                } else if (i === 14) {
-                    document.write(`<div class="merged-horizontal"><img src="imagenes/merged5.jpg" alt="Imagen combinada horizontal"></div>`);
-                } else if (i === 21) {
-                    // No agregamos la imagen 15 porque está combinada con 8
+                    document.write(`<div></div>`); 
                 } else if (!mergedIndexes.includes(i)) {
                     document.write(`<div><img src="imagenes/img${i}.jpg" alt="Imagen ${i}"></div>`);
                 }
             }
         </script>        
     </div>
+    <a href="Cartita/index.html">
+        <button class="btn">Léelo</button> <!-- Aquí está el botón -->
+    </a>
+    
 </body>
 </html>
