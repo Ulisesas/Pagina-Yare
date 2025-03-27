@@ -49,7 +49,19 @@
             transform: scale(1.1);
         }
         .btn {
-            background-color: #a72828;
+            background-color: #821e1e;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            align-content: end;
+        }
+        .btn2 {
+            background-color: #821e1e;
             color: white;
             border: none;
             border-radius: 20px;
@@ -93,6 +105,11 @@
             font-size: 40px;
             color: white;
             cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px; /* Espaciado entre botones */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -142,9 +159,14 @@
         </script>        
     </div>
 
-    <a href="Cartita/index.html">
-        <button class="btn">Léelo</button>
-    </a>
+    <div class="button-container">
+        <a href="Cartita/index.html">
+            <button class="btn">Primer Cartita</button>
+        </a>
+        <a href="Cartita 2/index.html">
+            <button class="btn">Segunda Cartita</button>
+        </a>
+    </div>
 
     <div class="modal" id="imageModal" onclick="closeModal()">
         <span class="close">&times;</span>
